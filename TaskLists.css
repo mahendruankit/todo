@@ -61,13 +61,14 @@
   border: 0.0625em solid #e25822;
   border-radius: 0.4em;
   height: 15em;
-  width: 10em;
+  width: 30%;
   box-shadow: 0.3125em 0.3125em 0.3125em rgba(0, 0, 0, 0.15);
   text-align: center;
   margin-bottom: 1em;
 }
 
-.card-details {
+.card-link {
+  text-decoration: none;
 }
 
 .card-title {
@@ -75,10 +76,8 @@
   font-weight: 600;
   font-size: large;
   color: #e25822;
-}
-
-hr {
-  margin-left: 1.3em;
+  margin-left: 25%;
+  text-align: left;
 }
 
 .card-status--complete {
@@ -87,6 +86,8 @@ hr {
   font-weight: bolder;
   text-decoration: line-through;
   text-decoration-thickness: 0.2em;
+  margin-left: 25%;
+  text-align: left;
 }
 
 .card-status--pending {
