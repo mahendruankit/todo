@@ -1,0 +1,59 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  filter: blur(0.25em);
+}
+
+.popup-container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  border: 0.0625em solid #e25822;
+  border-radius: 0.6em;
+  min-width: 25em;
+  filter: blur(0em);
+  background-color: white;
+}
+
+.title {
+  color: #e25822;
+  font-size: larger;
+  margin: 1em;
+}
+
+.name {
+  padding: 0.5em;
+  border-radius: 0.1875em;
+  font-size: 0.875em;
+  margin: 1em;
+  border: 0.0625em solid #e25822;
+  min-width: 75%;
+}
+
+.name:focus {
+  outline: none;
+  border: 0.0625em solid #e25822;
+}
+
+.add-button {
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  padding: 0 2em;
+  height: 2em;
+  border-radius: 2.5em;
+  color: white;
+  background-color: #e25822;
+  font-size: larger;
+  margin: 0.5em;
+}

@@ -2,17 +2,8 @@
 
 <html>
   <head>
+    <link rel="stylesheet" href="./Popup.css" />
     <link rel="stylesheet" href="./TaskLists.css" />
-    <script
-      src="https://kit.fontawesome.com/348cc65b0f.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <div class="page">
@@ -32,13 +23,11 @@
                 Trip to Paris
                 <hr />
               </div>
+
               <div class="card-status--complete">&nbsp;Completed Task</div>
               <div class="card-status--pending">
                 <input class="card-status-checkbox" type="checkbox" />
                 Pending task
-              </div>
-              <div class="card-add">
-                <i class="fas fa-plus-circle fa-2x"></i>
               </div>
             </div>
           </div>
@@ -54,9 +43,6 @@
                 <input class="card-status-checkbox" type="checkbox" />
                 Pending task
               </div>
-              <div class="card-add">
-                <i class="fas fa-plus-circle fa-2x"></i>
-              </div>
             </div>
           </div>
           <div class="card">
@@ -70,13 +56,20 @@
                 <input class="card-status-checkbox" type="checkbox" />
                 Pending task
               </div>
-              <div class="card-add">
-                <i class="fas fa-plus-circle fa-2x"></i>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="popup-container">
+        <div class="popup">
+          <div class="title">Add New List</div>
+          <div class="name-container">
+              <input type="text" class="name"></input>
+          </div>
+          <div class="add-button-container">
+              <button class="add-button">Add</button></div>
+        </div>
+      </div>
   </body>
 </html>
