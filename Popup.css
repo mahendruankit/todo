@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   font-family: 'Roboto', sans-serif;
-  filter: blur(0.25em);
+  filter: blur(0.9em);
 }
 
 .popup-container {
@@ -56,4 +56,31 @@
   background-color: #e25822;
   font-size: larger;
   margin: 0.5em;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .popup {
+    border: 0.0625em solid #e25822;
+    border-radius: 0.6em;
+    min-width: 80%;
+    min-height: 30%;
+    filter: blur(0em);
+    background-color: white;
+    border-radius: 1.4em;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.15);
+  }
+
+  .title {
+    color: #e25822;
+    font-size: 3em;
+    margin: 1em;
+  }
+
+  .name {
+    font-size: 3em;
+  }
+
+  .add-button {
+    font-size: 3em;
+  }
 }
