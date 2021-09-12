@@ -25,6 +25,10 @@
   margin: 0.5em;
 }
 
+.back-button-responsive {
+  display: none;
+}
+
 .back-button {
   margin: 1em 0em 2em 0em;
   font-size: 1.5em;
@@ -94,7 +98,79 @@
 }
 
 @media only screen and (max-device-width: 480px) {
+  .page {
+    justify-content: center;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+  }
+
+  .content {
+    height: 100%;
+  }
+
+  .task-title::before,
+  .task-title::after {
+    display: none;
+  }
+
+  .task-title {
+    font-size: 6em;
+    margin: 0.5em 0.5em 1.5em 0.5em;
+  }
+
+  .back-button {
+    display: none;
+  }
+
+  .back-button-responsive {
+    padding-right: 0.3em;
+    display: flex;
+  }
+
+  .card-container {
+    height: 80%;
+  }
+
   .card {
     width: 80%;
+    height: 90%;
+    display: flex;
+    border: 0.0625em solid #e25822;
+    border-radius: 1.4em;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.15);
+    text-align: left;
+    margin: 2em;
+  }
+
+  .card-details {
+    width: 100%;
+  }
+
+  .card-title {
+    font-size: 4em;
+  }
+
+  .card-sepeartor {
+    border-top: 0.05em solid #8c8b8b;
+  }
+
+  .card-status--complete,
+  .card-status--pending {
+    font-size: 3em;
+  }
+
+  .card-status-checkbox {
+    margin-top: 0.8em;
+    margin-right: 1em;
+    width: 3em;
+    height: 3em;
+  }
+
+  .card-add {
+    font-size: 2.8em;
   }
 }
