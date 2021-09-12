@@ -48,6 +48,7 @@
 .header-add-icon {
   color: #e25822;
   margin-right: 0.5em;
+  font-size: xx-large;
 }
 
 .cards {
@@ -120,11 +121,50 @@
     margin-right: 5%;
   }
 
+  .header {
+    margin-bottom: 5em;
+  }
+
+  .header-title {
+    font-size: 8.5em;
+  }
+
+  .header-add-text,
+  .card-status--complete,
+  .card-status--pending,
+  .card-add,
+  hr {
+    display: none;
+  }
+
+  .header-add {
+    padding: 0;
+  }
+
+  .header-add-icon {
+    font-size: 4em;
+    margin: 0;
+  }
+
   .cards {
     flex-direction: column;
   }
 
   .card {
+    display: flex;
     width: 90%;
+    height: 12em;
+    border: 0.0625em solid #e25822;
+    border-radius: 1.4em;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.15);
+    text-align: left;
+    margin: 2em;
+  }
+
+  .card-title {
+    font-size: 3.5em;
+    margin-left: 1em;
+    margin-top: 1em;
+    color: #836953;
   }
 }
