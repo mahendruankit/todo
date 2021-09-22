@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/348cc65b0f.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="Index.js"></script>  
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,101 +17,33 @@
     />
   </head>
   <body>
-    <div class="page">
+    <div class="page" id='page'>
       <div class="content">
         <div class="header">
           <div class="header-title">
             Task <span class="header-sub-title">Lists</span>
           </div>
           <div class="header-add">
-            <i class="fas fa-plus-circle header-add-icon"></i>
+            <i class="fas fa-plus-circle header-add-icon" onclick="loadPopup()"></i>
             <span class="header-add-text">Add List</spanheader-add-icon>
           </div>
         </div>
-        <div class="cards">
-          <div class="card">
-            <div class="card-details">
-              <div class="card-title">
-                Trip to Paris
-                <hr />
-              </div>
-              <div class="card-status--complete">&nbsp;Completed Task</div>
-              <div class="card-status--pending">
-                <input class="card-status-checkbox" type="checkbox" />
-                Pending task
-              </div>
-              <div class="card-add">
-                <i class="fas fa-plus-circle fa-2x"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-details">
-              <div class="card-title">
-                My Todo List 2
-                <hr />
-              </div>
-
-              <div class="card-status--complete">&nbsp;Completed Task</div>
-              <div class="card-status--pending">
-                <input class="card-status-checkbox" type="checkbox" />
-                Pending task
-              </div>
-              <div class="card-add">
-                <i class="fas fa-plus-circle fa-2x"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-details">
-              <div class="card-title">
-                My Todo List 3
-                <hr />
-              </div>
-              <div class="card-status--complete">&nbsp;Completed Task</div>
-              <div class="card-status--pending">
-                <input class="card-status-checkbox" type="checkbox" />
-                Pending task
-              </div>
-              <div class="card-add">
-                <i class="fas fa-plus-circle fa-2x"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-details">
-              <div class="card-title">
-                My Todo List 4
-                <hr />
-              </div>
-              <div class="card-status--complete">&nbsp;Completed Task</div>
-              <div class="card-status--pending">
-                <input class="card-status-checkbox" type="checkbox" />
-                Pending task
-              </div>
-              <div class="card-add">
-                <i class="fas fa-plus-circle fa-2x"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-details">
-              <div class="card-title">
-                My Todo List 5
-                <hr />
-              </div>
-              <div class="card-status--complete">&nbsp;Completed Task</div>
-              <div class="card-status--pending">
-                <input class="card-status-checkbox" type="checkbox" />
-                Pending task
-              </div>
-              <div class="card-add">
-                <i class="fas fa-plus-circle fa-2x"></i>
-              </div>
-            </div>
-          </div>
+        <div class="cards" id='cards'>
+        </div>
         </div>
       </div>
+
+      <div class="popup-container" id='popup'>
+        <div class="popup">
+          <div class="title">Add New List</div>
+          <div class="name-container">
+              <input type="text" class="name" id='listName'></input>
+          </div>
+          <div class="button-container">
+              <button class="add-button" onclick="addTaskList(document.getElementById('listName').value)">Add</button>
+              <button class="close-button" onclick="closePopup()">Close</button>
+          </div>
+        </div>
     </div>
   </body>
 </html>

@@ -1,14 +1,17 @@
 .page {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  font-family: 'Roboto', sans-serif;
   margin-top: 5%;
   margin-bottom: 10%;
   margin-left: 20%;
   margin-right: 20%;
-  font-family: 'Roboto', sans-serif;
 }
 
 .content {
   min-height: 100vh;
+  min-width: 70%;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -51,6 +54,12 @@
   font-size: xx-large;
 }
 
+.header-add-icon,
+.card-add,
+.card-delete :hover {
+  cursor: pointer;
+}
+
 .cards {
   display: flex;
   flex-direction: row;
@@ -67,7 +76,7 @@
   height: 20em;
   box-shadow: 0.3125em 0.3125em 0.3125em rgba(0, 0, 0, 0.15);
   text-align: center;
-  margin-bottom: 1em;
+  margin: 1em;
   position: relative;
 }
 
@@ -110,7 +119,70 @@
   bottom: 0;
   right: 0;
   margin: 1em;
+  color: #1e90ff;
+}
+
+.card-delete {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 3em;
+  margin: 1em;
+  color: red;
+}
+
+.popup-container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.popup {
+  border: 0.0625em solid #e25822;
+  border-radius: 0.6em;
+  min-width: 25em;
+  filter: blur(0em);
+  background-color: white;
+}
+
+.title {
   color: #e25822;
+  font-size: larger;
+  margin: 1em;
+}
+
+.name {
+  padding: 0.5em;
+  border-radius: 0.1875em;
+  font-size: 0.875em;
+  margin: 1em;
+  border: 0.0625em solid #e25822;
+  min-width: 75%;
+}
+
+.name:focus {
+  outline: none;
+  border: 0.0625em solid #e25822;
+}
+
+.add-button,
+.close-button {
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  padding: 0 2em;
+  height: 2em;
+  border-radius: 2.5em;
+  color: white;
+  background-color: #e25822;
+  font-size: larger;
+  margin: 0.5em;
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -166,5 +238,30 @@
     margin-left: 1em;
     margin-top: 1em;
     color: #836953;
+  }
+
+  .popup {
+    border: 0.0625em solid #e25822;
+    border-radius: 0.6em;
+    min-width: 80%;
+    min-height: 30%;
+    filter: blur(0em);
+    background-color: white;
+    border-radius: 1.4em;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.15);
+  }
+
+  .title {
+    color: #e25822;
+    font-size: 3em;
+    margin: 1em;
+  }
+
+  .name {
+    font-size: 3em;
+  }
+
+  .add-button {
+    font-size: 3em;
   }
 }
