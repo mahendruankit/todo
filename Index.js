@@ -8,7 +8,7 @@ function addTaskList(heading) {
 
   taskLists.push(taskList);
 
-  renderTodoList(taskLists);
+  renderTaskList(taskLists);
   closePopup();
 }
 
@@ -35,11 +35,11 @@ function deleteTaskList(id) {
     if (taskLists[i].id === id) {
       taskLists.splice(i, 1);
     }
-    renderTodoList(taskLists);
+    renderTaskList(taskLists);
   }
 }
 
-function renderTodoList(taskLists) {
+function renderTaskList(taskLists) {
   const cards = document.getElementById('cards');
   cards.innerHTML = '';
 
