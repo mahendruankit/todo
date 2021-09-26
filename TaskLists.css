@@ -93,19 +93,25 @@
   text-align: left;
 }
 
-.card-status--complete {
-  margin-top: 2em;
+.card-todo-item--complete {
   color: #e25822;
-  font-weight: bolder;
+  font-size: 1em;
+  font-weight: bold;
   text-decoration: line-through;
   text-decoration-thickness: 0.2em;
-  margin-left: 25%;
-  text-align: left;
+  text-align: center;
+  padding: 0;
+}
+
+.card-todo-item--complete > button {
+  display: none;
 }
 
 .card-todo-item {
   font-size: 1em;
   font-weight: bold;
+  text-align: center;
+  padding: 0;
 }
 
 .card-todo-button {

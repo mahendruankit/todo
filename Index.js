@@ -80,10 +80,17 @@ function renderTaskList(taskLists) {
 
         taskList.todoList.forEach((todo) => {
           const li = document.createElement('li');
-          li.setAttribute('class', 'card-todo-item');
+          if (todo.status === 'complete') {
+            li.setAttribute('class', 'card-todo-item--complete');
+          } else {
+            li.setAttribute('class', 'card-todo-item');
+          }
+
+          li.setAttribute('data-key', todo.id);
 
           const todoButton = document.createElement('BUTTON');
           todoButton.setAttribute('class', 'card-todo-button');
+          todoButton.setAttribute('onclick', 'markComplete(this)');
           todoButton.innerHTML = 'Mark done';
 
           li.innerHTML = todo.heading;
@@ -150,16 +157,16 @@ function loadTodoPopup(id) {
   const addTodoButton = document.getElementById('addTodoButton');
 
   addTodoButton.setAttribute('onclick', 'addTodoItem( "' + id + '" )');
-
-  console.log(id);
 }
 
 function closeTodoPopup() {
   var popupContainer = document.getElementById('todoPopup');
   var page = document.getElementById('page');
+  var todoName = document.getElementById('todoName');
 
   page.style.filter = '';
   popupContainer.style.display = 'none';
+  todoName.value = '';
 }
 
 /** To do **/
@@ -168,15 +175,43 @@ function addTodoItem(id) {
   const todo = {
     id: 'todo' + Date.now(),
     heading: document.getElementById('todoName').value,
+    status: 'incomplete',
   };
 
   for (let i = 0; i < taskLists.length; i++) {
     if (taskLists[i].id == id) {
       var todoList = taskLists[i].todoList;
       todoList.push(todo);
-      console.log(todoList);
     }
   }
   closeTodoPopup();
   renderTaskList(taskLists);
+}
+
+function markComplete(element) {
+  const todoId = element.parentNode.getAttribute('data-key');
+  const cardId =
+    element.parentNode.parentNode.parentNode.parentNode.getAttribute(
+      'data-key'
+    );
+
+  //Mark todo status as complete
+  markTodoStatusAsComplete(cardId, todoId);
+
+  element.parentNode.classList.toggle('card-todo-item--complete');
+  element.style.display = 'none';
+}
+
+function markTodoStatusAsComplete(cardId, todoId) {
+  for (let i = 0; i < taskLists.length; i++) {
+    if (taskLists[i].id == cardId) {
+      var todoList = taskLists[i].todoList;
+      for (let j = 0; j < todoList.length; j++) {
+        if (todoList[j].id == todoId) {
+          console.log('here');
+          todoList[j].status = 'complete';
+        }
+      }
+    }
+  }
 }
