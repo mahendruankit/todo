@@ -95,7 +95,7 @@
 
 .card-todo-item--complete {
   color: #e25822;
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: bold;
   text-decoration: line-through;
   text-decoration-thickness: 0.2em;
@@ -122,16 +122,15 @@
 }
 
 button {
-  width: 101px;
-  height: 43px;
-  background: #e74c3c;
-  border-radius: 20px;
+  width: 5em;
+  height: 2em;
+  border-radius: 1.1em;
   opacity: 1;
   border: none;
-  font-size: 0.8em;
+  font-size: 1em;
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 10px;
+  margin: 0.7em;
   cursor: pointer;
 }
 
