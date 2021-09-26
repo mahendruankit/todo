@@ -103,14 +103,33 @@
   text-align: left;
 }
 
-.card-status--pending {
-  display: flex;
-  margin-top: 1em;
-  color: black;
-  font-weight: bolder;
+.card-todo-item {
+  font-size: 1em;
+  font-weight: bold;
 }
 
-.card-status-checkbox {
+.card-todo-button {
+  font-size: 0.8em;
+  height: 1.5em;
+  width: auto;
+  background-color: #4b8ce8;
+}
+
+button {
+  width: 101px;
+  height: 43px;
+  background: #e74c3c;
+  border-radius: 20px;
+  opacity: 1;
+  border: none;
+  font-size: 0.8em;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.card-todo-status-checkbox {
   margin-right: 0.5em;
 }
 
@@ -184,6 +203,23 @@
   margin: 0.5em;
 }
 
+.message--active {
+  display: flex;
+  visibility: visible;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.card-todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.message--inactive {
+  visibility: hidden;
+}
+
 @media only screen and (max-device-width: 480px) {
   .page {
     margin-top: 5%;
@@ -202,7 +238,7 @@
 
   .header-add-text,
   .card-status--complete,
-  .card-status--pending,
+  .card-todo-status--pending,
   .card-add,
   hr {
     display: none;

@@ -27,7 +27,8 @@
             <i class="fas fa-plus-circle header-add-icon" onclick="loadPopup()"></i>
             <span class="header-add-text">Add List</spanheader-add-icon>
           </div>
-        </div>
+        </div>        
+        <div id="message" class="message--active">No items in the todo list</div>
         <div class="cards" id='cards'>
         </div>
         </div>
@@ -37,7 +38,7 @@
         <div class="popup">
           <div class="title">Add New List</div>
           <div class="name-container">
-              <input type="text" class="name" id='listName'></input>
+              <input type="text" class="name" id='listName' placeholder="Add new list"></input>
           </div>
           <div class="button-container">
               <button class="add-button" onclick="addTaskList(document.getElementById('listName').value)">Add</button>
@@ -50,10 +51,10 @@
       <div class="popup">
         <div class="title">Add New Item</div>
         <div class="name-container">
-            <input type="text" class="name"></input>
+            <input type="text" class="name" id='todoName' placeholder="Add new item"></input>
         </div>
         <div class="add-button-container">
-            <button class="add-button" id="addTodoButton">Add</button>
+            <button class="add-button" id="addTodoButton" >Add</button>
             <button class="close-button" onclick="closeTodoPopup()">Close</button>
         </div>
             
