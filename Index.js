@@ -147,11 +147,11 @@ function loadTodoPopup(id) {
   page.style.filter = 'blur(0.9em)';
   popupContainer.style.display = 'flex';
 
-  document
-    .getElementById('addTodoButton')
-    .addEventListener('click', function () {
-      addTodoItem(id);
-    });
+  const addTodoButton = document.getElementById('addTodoButton');
+
+  addTodoButton.setAttribute('onclick', 'addTodoItem( "' + id + '" )');
+
+  console.log(id);
 }
 
 function closeTodoPopup() {
