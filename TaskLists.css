@@ -125,8 +125,7 @@
 .card-delete {
   position: absolute;
   bottom: 0;
-  right: 0;
-  padding-right: 3em;
+  right: 3em;
   margin: 1em;
   color: red;
 }
