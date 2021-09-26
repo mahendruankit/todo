@@ -38,17 +38,15 @@ function addTaskList(heading) {
 function deleteTaskList(id) {
   for (let i = 0; i < taskLists.length; i++) {
     if (taskLists[i].id == id) {
-      console.log('do you even slice bro?');
       taskLists.splice(i, 1);
     }
     renderTaskList(taskLists);
   }
-  console.log(taskLists.length);
 }
 
 function renderTaskList(taskLists) {
   var cards = document.getElementById('cards');
-  
+
   //Remove all child nodes
   cards.innerHTML = '';
 
@@ -82,19 +80,40 @@ function renderTaskList(taskLists) {
 
     cardDeleteContainer.appendChild(cardDeleteIcon);
 
+    const cardAddIcon = document.createElement('i');
+    cardAddIcon.setAttribute('class', 'fas fa-plus-circle fa-2x');
+
+    const cardAddContainer = document.createElement('div');
+    cardAddContainer.setAttribute('class', 'card-add');
+    cardAddContainer.setAttribute(
+      'onclick',
+      'loadTodoPopup( "' + taskList.id + '" )'
+    );
+
+    cardAddContainer.appendChild(cardAddIcon);
+
+    //Append Card Details Element
+
     cardDetails.appendChild(cardTitle);
     cardDetails.appendChild(cardDeleteContainer);
+    cardDetails.appendChild(cardAddContainer);
+
+    //Append Card Element
 
     card.appendChild(cardDetails);
 
+    //Append Fragment
+
     frag.appendChild(card);
+
+    //Append Cards Element
     cards.appendChild(frag);
   });
 }
 
 /** Todo Popup **/
 
-function loadTodoPopup() {
+function loadTodoPopup(id) {
   var popupContainer = document.getElementById('todoPopup');
   var page = document.getElementById('page');
 
@@ -104,7 +123,7 @@ function loadTodoPopup() {
   document
     .getElementById('addTodoButton')
     .addEventListener('click', function () {
-      console.log('hi');
+      addTodoItem(id);
     });
 }
 
@@ -119,3 +138,7 @@ function closeTodoPopup() {
 }
 
 /** To do **/
+
+function addTodoItem(id) {
+  console.log('add to do item function' + id);
+}
