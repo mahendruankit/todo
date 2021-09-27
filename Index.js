@@ -70,8 +70,12 @@ function renderTaskList(taskLists) {
       const cardTitle = document.createElement('div');
       cardTitle.setAttribute('class', 'card-title');
       cardTitle.innerHTML = taskList.heading;
+
+      const cardHr = document.createElement('hr');
+
       //append card title
       cardDetails.appendChild(cardTitle);
+      cardDetails.appendChild(cardHr);
 
       //append todo if exists
       if (taskList.todoList.length > 0) {

@@ -89,8 +89,7 @@
   font-weight: 600;
   font-size: large;
   color: #e25822;
-  margin-left: 25%;
-  text-align: left;
+  text-align: center;
 }
 
 .card-todo-item--complete {
@@ -245,6 +244,7 @@ button {
   .card-status--complete,
   .card-todo-status--pending,
   .card-add,
+  .card-delete,
   hr {
     display: none;
   }
@@ -273,11 +273,16 @@ button {
     margin: 2em;
   }
 
+  .card-details {
+    width: 90%;
+  }
+
   .card-title {
     font-size: 3.5em;
     margin-left: 1em;
     margin-top: 1em;
     color: #836953;
+    text-align: center;
   }
 
   .popup {
@@ -303,5 +308,9 @@ button {
 
   .add-button {
     font-size: 3em;
+  }
+
+  .card-todo-list {
+    display: none;
   }
 }
