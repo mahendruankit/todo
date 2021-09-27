@@ -237,7 +237,9 @@ button {
   }
 
   .header-title {
-    font-size: 8.5em;
+    font-size: 7em;
+    margin-right: 1em;
+    text-align: left;
   }
 
   .header-add-text,
@@ -254,7 +256,7 @@ button {
   }
 
   .header-add-icon {
-    font-size: 4em;
+    font-size: 3em;
     margin: 0;
   }
 
